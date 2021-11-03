@@ -50,7 +50,7 @@ database.query(QUERY_SELECT, (error, result) =>{
 });
 
 app.get('/api/planes/status', (request, response) => {
-const QUERY_SELECT = "SELECT COUNT(id) AS count, is_late FROM scooters GROUP BY is_late ORDER BY COUNT(id) DESC";
+const QUERY_SELECT = "SELECT COUNT(id) AS count, is_late FROM planes GROUP BY is_late ORDER BY COUNT(id) DESC";
 
 database.query(QUERY_SELECT, (error, result) =>{
     console.log(result);
